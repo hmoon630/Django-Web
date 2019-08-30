@@ -19,7 +19,7 @@
                     <p class="card-text"> {{ object.text }} </p>
                 </div>
                 <ul class="list-group list-group-flush">
-                    <li class="list_group-item">
+                    <li class="list-group-item">
                         <a href="{% url 'photo:like' object.id %}"
                             class="float-left btn-like {%if user in object.like.all %} active {%endif%}">좋아요!</a>
                         {% if object.like.all.count %}
@@ -43,7 +43,7 @@
         </div>
         <div class="col">
             {% load static %}
-            <div class="card" style="">
+            <div class="card">
                 <img src="{% static 'images/bu-k.jpg' %}" class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title">admin</h5>

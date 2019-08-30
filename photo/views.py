@@ -84,7 +84,7 @@ class PhotoMyList(ListView):
         if not request.user.is_authenticated:
             messages.warning(request, '로그인을 먼저하세요')
             return HttpResponseRedirect('/')
-        return super(PhotoMyList).dispatch(request, *args, **kwargs)
+        return super(PhotoMyList, self).dispatch(request, *args, **kwargs)
 
 
 class PhotoCreate(CreateView):
